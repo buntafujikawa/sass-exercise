@@ -1,0 +1,151 @@
+.nav a, .nav button {
+  text-decoration: none; }
+.nav .classA, .nav .classC {
+  color: red; }
+
+a, button {
+  text-decoration: none; }
+  a:hover, button:hover {
+    color: red; }
+  a.span, button.span {
+    color: blue; }
+
+li {
+  text-decoration: none; }
+  li.menu-item {
+    color: hotpink;
+    font-weight: 500; }
+    .nav li.menu-item {
+      display: inline-block; }
+
+.nav--link {
+  display: inline-block; }
+.nav--title {
+  font-size: 18px; }
+
+.sweet {
+  background-color: ghostwhite;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-top: 0; }
+
+.selector {
+  color: blue; }
+  @media screen and (min-width: 300px) {
+    .selector {
+      color: purple; } }
+  @media screen and (min-width: 300px) and (max-width: 700px) {
+    .selector {
+      color: red; } }
+
+.main-container {
+  background-color: ghostwhite; }
+
+a, button {
+  color: yellow;
+  display: list-item;
+  text-decoration: none; }
+
+.classA, .classC {
+  color: red; }
+
+.classB, .classC {
+  background-color: blue; }
+
+.classC {
+  width: 100px; }
+
+.class {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  color: black;
+  font-weight: bold; }
+
+.main-content {
+  color: red;
+  background-color: white; }
+
+.sidebar {
+  float: left; }
+  [dir=rtl] .sidebar {
+    float: right; }
+
+.nav a, .nav button {
+  text-decoration: none; }
+.nav .classA, .nav .classC {
+  color: red; }
+
+a, button {
+  text-decoration: none; }
+  a:hover, button:hover {
+    color: red; }
+  a.span, button.span {
+    color: blue; }
+
+li {
+  text-decoration: none; }
+  li.menu-item {
+    color: hotpink;
+    font-weight: 500; }
+    .nav li.menu-item {
+      display: inline-block; }
+
+.nav--link {
+  display: inline-block; }
+.nav--title {
+  font-size: 18px; }
+
+.sweet {
+  background-color: ghostwhite;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-top: 0; }
+
+.selector {
+  color: blue; }
+  @media screen and (min-width: 300px) {
+    .selector {
+      color: purple; } }
+  @media screen and (min-width: 300px) and (max-width: 700px) {
+    .selector {
+      color: red; } }
+
+.main-container {
+  background-color: ghostwhite; }
+
+a, button {
+  color: yellow;
+  display: list-item;
+  text-decoration: none; }
+
+.classA, .classC {
+  color: red; }
+
+.classB, .classC {
+  background-color: blue; }
+
+.classC {
+  width: 100px; }
+
+.class {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  color: black;
+  font-weight: bold; }
+
+.main-content {
+  color: red;
+  background-color: white; }
+
+.sidebar {
+  float: left; }
+  [dir=rtl] .sidebar {
+    float: right; }
+
+/*# sourceMappingURL=introToSass.css.map */

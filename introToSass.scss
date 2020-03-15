@@ -1,0 +1,272 @@
+// https://codepen.io/sasstantrum/post/intro-to-sass
+// SELECTORS
+.nav {
+  a {
+    text-decoration: none;
+  }
+  .classA {
+    color: red;
+  }
+}
+
+// & shorthand for parent selectors
+a {
+  text-decoration: none;
+  &:hover {
+    color: red;
+  }
+  &.span {
+    color: blue;
+  }
+}
+li {
+  text-decoration: none;
+  &.menu-item {
+    color: hotpink;
+    font-weight: 500;
+    .nav & {
+      display: inline-block;
+    }
+  }
+}
+.nav {
+  &--link {
+    display: inline-block;
+  }
+  &--title {
+    font-size: 18px;
+  }
+}
+
+// PROPERTIES
+.sweet {
+  background: {
+    color: ghostwhite;
+    position: center;
+    size: contain;
+  }
+  margin: {
+    bottom: 1rem;
+    left: 0;
+    top: 0;
+  }
+}
+
+// MEDIA QUERIES
+.selector {
+  color: blue;
+  @media screen and (min-width: 300px) {
+    color: purple;
+    @media screen and (max-width: 700px) {
+      color: red;
+    }
+  }
+}
+
+// Variables
+$brand-color: #C69;
+$accent-color: #4286f4;
+$white-color: ghostwhite;
+$z-background: 1;
+$z-menu-trigger: 50;
+$z-menu: $z-menu-trigger + 1; //aka 51
+
+.main-container {
+  background-color: $white-color;
+}
+
+// @extend
+a {
+  color: yellow;
+  display: list-item;
+  text-decoration: none;
+}
+button {
+  @extend a;
+}
+
+.classA {
+  color: red;
+}
+.classB {
+  background-color: blue;
+}
+.classC {
+  @extend .classA, .classB;
+  width: 100px;
+}
+
+// Mixins
+@mixin mixin1() {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+@mixin mixin2() {
+  // @extend .classB;
+  color: black;
+}
+
+.class {
+  @include mixin1();
+  @include mixin2();
+  font-weight: bold;
+}
+
+// ARGUMENTS
+@mixin colors ($color: black, $background-color: black) {
+  color: $color;
+  background-color: $background-color;
+}
+
+.main-content {
+  @include colors (red, white);
+}
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+  #{$property}: $ltr-value;
+
+  [dir=rtl] & {
+    #{$property}: $rtl-value;
+  }
+}
+
+.sidebar {
+  @include rtl(float, left, right);
+}
+// https://codepen.io/sasstantrum/post/intro-to-sass
+// SELECTORS
+.nav {
+  a {
+    text-decoration: none;
+  }
+  .classA {
+    color: red;
+  }
+}
+
+// & shorthand for parent selectors
+a {
+  text-decoration: none;
+  &:hover {
+    color: red;
+  }
+  &.span {
+    color: blue;
+  }
+}
+li {
+  text-decoration: none;
+  &.menu-item {
+    color: hotpink;
+    font-weight: 500;
+    .nav & {
+      display: inline-block;
+    }
+  }
+}
+.nav {
+  &--link {
+    display: inline-block;
+  }
+  &--title {
+    font-size: 18px;
+  }
+}
+
+// PROPERTIES
+.sweet {
+  background: {
+    color: ghostwhite;
+    position: center;
+    size: contain;
+  }
+  margin: {
+    bottom: 1rem;
+    left: 0;
+    top: 0;
+  }
+}
+
+// MEDIA QUERIES
+.selector {
+  color: blue;
+  @media screen and (min-width: 300px) {
+    color: purple;
+    @media screen and (max-width: 700px) {
+      color: red;
+    }
+  }
+}
+
+// Variables
+$brand-color: #C69;
+$accent-color: #4286f4;
+$white-color: ghostwhite;
+$z-background: 1;
+$z-menu-trigger: 50;
+$z-menu: $z-menu-trigger + 1; //aka 51
+
+.main-container {
+  background-color: $white-color;
+}
+
+// @extend
+a {
+  color: yellow;
+  display: list-item;
+  text-decoration: none;
+}
+button {
+  @extend a;
+}
+
+.classA {
+  color: red;
+}
+.classB {
+  background-color: blue;
+}
+.classC {
+  @extend .classA, .classB;
+  width: 100px;
+}
+
+// Mixins
+@mixin mixin1() {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+@mixin mixin2() {
+  // @extend .classB;
+  color: black;
+}
+
+.class {
+  @include mixin1();
+  @include mixin2();
+  font-weight: bold;
+}
+
+// ARGUMENTS
+@mixin colors ($color: black, $background-color: black) {
+  color: $color;
+  background-color: $background-color;
+}
+
+.main-content {
+  @include colors (red, white);
+}
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+  #{$property}: $ltr-value;
+
+  [dir=rtl] & {
+    #{$property}: $rtl-value;
+  }
+}
+
+.sidebar {
+  @include rtl(float, left, right);
+}
