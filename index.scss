@@ -1,0 +1,122 @@
+/*
+# Syntax
+## special functions
+*/
+// calc()
+.logo {
+  $width: 800px;
+  width: $width;
+  position: absolute;
+  left: calc(50% - #{$width / 2}); // 単位が違う時はcalcを使用、special functionの中でhは#{}を使用
+  right: 1000px - $width;
+  // right: 50% - $width;
+  top: 0;
+}
+
+/*
+min max
+
+env
+https://developer.mozilla.org/ja/docs/Web/CSS/env
+min
+https://developer.mozilla.org/ja/docs/Web/CSS/min
+*/
+$padding: 12px;
+
+.post {
+  // Since these max() calls don't use any Sass features other than
+  // interpolation, they're compiled to CSS max() calls.
+  //padding-left: max(#{$padding}, env(safe-area-inset-left));
+  //padding-right: max(#{$padding}, env(safe-area-inset-right));
+}
+
+.sidebar {
+  // Since these refer to a Sass variable without interpolation, they call
+  // Sass's built-in max() function.
+  padding-left: max($padding, 20px);
+  padding-right: max($padding, 20px);
+}
+
+// interpolation
+@mixin corner-icon($name, $top-or-bottom, $left-or-right) {
+  .icon-#{$name} {
+    background-image: url("/icons/#{$name}.svg");
+    position: absolute;
+    #{$top-or-bottom}: 0;
+    #{$left-or-right}: 0;
+  }
+}
+// to .icon-mail
+@include corner-icon("mail", top, left);
+
+/*
+# style rules
+*/
+// to .alert ul, .alert p, .warning ul, .warning p
+.alert, .warning {
+  ul, p {
+    margin-right: 0;
+    margin-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+ul > {
+  li {
+    list-style-type: none;
+  }
+}
+
+// A + Bは「要素 A」と同一階層で直後に登場する「要素 B」
+h2 {
+  + p {
+    border-top: 1px solid gray;
+  }
+}
+
+// そもそもの~の意味を知らなかった...
+// A ~ B は「要素 A」と同一階層で後続に登場する全ての「要素 B」
+p {
+  ~ {
+    span {
+      opacity: 0.8;
+    }
+  }
+}
+
+.info-page {
+  margin: auto {
+    bottom: 10px;
+    top: 2px;
+  }
+}
+
+/*
+## parent selector
+*/
+// adding suffix
+.accordion {
+  max-width: 600px;
+  margin: 4rem auto;
+  width: 90%;
+  font-family: "Raleway", sans-serif;
+  background: #f4f4f4;
+
+  &__copy {
+    display: none;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    color: gray;
+    line-height: 1.6;
+    font-size: 14px;
+    font-weight: 500;
+
+    // to .accordion__copy--open
+    &--open {
+      display: block;
+    }
+  }
+}
+
+/*
+Placeholder Selectors
+*/

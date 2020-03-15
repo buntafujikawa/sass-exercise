@@ -1,0 +1,75 @@
+/*
+# Syntax
+## special functions
+*/
+.logo {
+  width: 800px;
+  position: absolute;
+  left: calc(50% - 400px);
+  right: 200px;
+  top: 0; }
+
+/*
+min max
+
+env
+https://developer.mozilla.org/ja/docs/Web/CSS/env
+min
+https://developer.mozilla.org/ja/docs/Web/CSS/min
+*/
+.sidebar {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.icon-mail {
+  background-image: url("/icons/mail.svg");
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/*
+# style rules
+*/
+.alert ul, .alert p, .warning ul, .warning p {
+  margin-right: 0;
+  margin-left: 0;
+  padding-bottom: 0; }
+
+ul > li {
+  list-style-type: none; }
+
+h2 + p {
+  border-top: 1px solid gray; }
+
+p ~ span {
+  opacity: 0.8; }
+
+.info-page {
+  margin: auto;
+    margin-bottom: 10px;
+    margin-top: 2px; }
+
+/*
+## parent selector
+*/
+.accordion {
+  max-width: 600px;
+  margin: 4rem auto;
+  width: 90%;
+  font-family: "Raleway", sans-serif;
+  background: #f4f4f4; }
+  .accordion__copy {
+    display: none;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    color: gray;
+    line-height: 1.6;
+    font-size: 14px;
+    font-weight: 500; }
+    .accordion__copy--open {
+      display: block; }
+
+/*
+Placeholder Selectors
+*/
+
+/*# sourceMappingURL=index.css.map */
