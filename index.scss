@@ -258,3 +258,17 @@ $base-color: #036;
     background-color: lighten($base-color, $i * 5%);
   }
 }
+
+$accent-color: #fbbc04;
+
+:root {
+  // WRONG, will not work in recent Sass versions.
+  --accent-color-wrong: $accent-color;
+
+  // RIGHT, will work in all Sass versions.
+  --accent-color-right: #{$accent-color};
+}
+
+a {
+  color: var(--accent-color-right);
+}
